@@ -253,16 +253,17 @@ app.post('/commentData/get', (req, res) => {
 })
 
 app.get('/detail', (req, res) => {
-    const author = req.query.author;
-    const uid = req.query.uid;
-    const type = req.query.type;
-    const profile = req.query.profile;
-    const content = req.query.content;
-    const situation = req.query.situation;
-    const date = req.query.date;
+    const { author, uid, type, profile, content, situation, date } = req.query;
 
-
-    res.redirect(`https://errorfind-frontend.vercel.app/error/detail?author=${author}&uid=${uid}&type=${type}&profile=${profile}&date=${date}&content=${content}&situation=${situation}`);
+    res.json({
+        author,
+        uid,
+        type,
+        profile,
+        content,
+        situation,
+        date
+    });
 });
 
 app.get('/errorBoardData/get/status', (req, res) => {
