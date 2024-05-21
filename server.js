@@ -262,7 +262,7 @@ app.get('/detail', (req, res) => {
     const date = req.query.date;
 
 
-    res.redirect(`http://localhost:5173/error/detail?author=${author}&uid=${uid}&type=${type}&profile=${profile}&date=${date}&content=${content}&situation=${situation}`);
+    res.redirect(`https://errorfind-frontend.vercel.app/error/detail?author=${author}&uid=${uid}&type=${type}&profile=${profile}&date=${date}&content=${content}&situation=${situation}`);
 });
 
 app.get('/errorBoardData/get/status', (req, res) => {
