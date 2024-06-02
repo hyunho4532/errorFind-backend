@@ -10,7 +10,7 @@ function errorTypeFromData (req, res, response) {
 
         const jsonData = JSON.parse(data);
 
-        const jsonErrorTypeDataS = jsonData.data.errortype.web.map((error) => error.error);
+        const jsonErrorTypeDataS = jsonData.data.selectedPlatform.web.map((error) => error.error);
 
         res.send(jsonErrorTypeDataS);
     })
@@ -27,7 +27,7 @@ function errorTypeFromDataAndroid (req, res, response) {
         
         const jsonData = JSON.parse(data);
 
-        const jsonErrorTypeDataS = jsonData.data.errortype.android.map((error) => error.error);
+        const jsonErrorTypeDataS = jsonData.data.selectedPlatform.android.map((error) => error.error);
 
         res.send(jsonErrorTypeDataS);
     });
@@ -44,7 +44,7 @@ function errorTypeFromDataDevOps (req, res, response) {
         
         const jsonData = JSON.parse(data);
 
-        const jsonErrorTypeDataS = jsonData.data.errortype.devops.map((error) => error.error);
+        const jsonErrorTypeDataS = jsonData.data.selectedPlatform.devops.map((error) => error.error);
 
         res.send(jsonErrorTypeDataS);
     });
