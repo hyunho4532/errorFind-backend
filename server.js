@@ -291,7 +291,7 @@ app.get('/errorBoardData/get/web', (req, res) => {
         if (err) {
             res.status(500).send('Error saving data to DynamoDB');
         } else {
-            const filteringWebTypeData = data.Items.filter(item => item.selectedPlatformData === '웹');
+            const filteringWebTypeData = data.Items.filter(item => item.selectedPlatform === '웹');
             res.json(filteringWebTypeData);
         }
     });
